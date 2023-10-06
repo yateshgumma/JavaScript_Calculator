@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body onload="updateDisplay()">
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4 col-1"></div>
+        <div class="col-md-4 col-10 calculator">
+            <div class="input mt-3" id="input"></div>
+          <div class="calculator_keypad">
+            <div class="calculator_keys second_row">
+              <button class="btn key reset" onclick="clearDisplay()">C</button>
+              <button class="btn key add" onclick="deleteLastElement()">CE</button>
+              <button class="btn key modules" onclick="appendToDisplay('%')">%</button>
+              <button class="btn key division" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div class="calculator_keys third-row">
+              <button class="btn key" onclick="appendToDisplay('7')">7</button>
+              <button class="btn key" onclick="appendToDisplay('8')">8</button>
+              <button class="btn key" onclick="appendToDisplay('9')">9</button>
+              <button class="btn key multi" onclick="appendToDisplay('*')">X</button>
+            </div>
+            <div class="calculator_keys fourth-row">
+              <button class="btn key" onclick="appendToDisplay('4')">4</button>
+              <button class="btn key" onclick="appendToDisplay('5')">5</button>
+              <button class="btn key" onclick="appendToDisplay('6')">6</button>
+              <button class="btn key substraction" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div class="calculator_keys fifth-row">
+              <button class="btn key" onclick="appendToDisplay('1')">1</button>
+              <button class="btn key" onclick="appendToDisplay('2')">2</button>
+              <button class="btn key" onclick="appendToDisplay('3')">3</button>
+              <button class="btn key addition" onclick="appendToDisplay('+')">+</button>
+            </div>
+            <div class="calculator_keys sixth-row">
+              <button class="btn key" onclick="appendToDisplay('0')">0</button>
+              <button class="btn key" onclick="appendToDisplay('.')">.</button>
+              <button class="btn key" onclick="deleteLastElement()">Del</button>
+              <button class="btn key equals" onclick="calculateResult()">=</button>
+            </div>
+            <div class="calculator_keys empty-row"></div>
+          </div>
+        </div>
+        <div class="col-md-4 col-1"></div>
+      </div>
+    </div>
+    <script src="./bootstrap/jquer.min.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
